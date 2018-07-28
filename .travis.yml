@@ -1,18 +1,21 @@
 language: python
-
 python:
-  - '3.6'
-
+- '3.6'
+before_install:
+- openssl aes-256-cbc -K $encrypted_de45b48d5d04_key -iv $encrypted_de45b48d5d04_iv
+  -in xomnia-training.json.enc -out xomnia-training.json -d
 install:
-  - pip install -r requirements.txt
-
-
-
+- pip install -r requirements.txt
 script:
-  - python -m unittest discover
-  - coverage erase
-  - coverage run -m pytest && coverage html
-  - pylint --errors-only main.py
-
+- python -m unittest discover
+- coverage erase
+- coverage run -m pytest && coverage html
+- pylint --errors-only main.py
 after_success:
-  - codecov
+- codecov
+deploy:
+    provider: gae
+    skip_cleanup: true
+    keyfile: xomnia-training.json
+    project: xomnia-training
+default: true
