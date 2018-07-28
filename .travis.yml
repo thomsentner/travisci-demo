@@ -12,7 +12,7 @@ script:
   - python -m unittest discover
   - coverage erase
   - coverage run -m pytest && coverage html
-  - pylint main.py
+  - pylint --errors-only main.py
 
 after_success:
   - codecov
