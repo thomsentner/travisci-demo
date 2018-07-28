@@ -11,7 +11,7 @@ install:
 script:
   - python -m unittest discover
   - coverage erase
-  - coverage run tests/test_flaskapp.py && coverage html
+  - coverage run && coverage html
 
 after_success:
   - codecov
