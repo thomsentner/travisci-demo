@@ -6,4 +6,4 @@ runtime_config:
   python_version: 3
 instance_class: B1
 manual_scaling:
-  instances: 1s
+  instances: 1
