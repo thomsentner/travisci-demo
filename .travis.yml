@@ -14,3 +14,9 @@ script:
 after_success:
   - codecov
 
+deploy:
+    provider: gae
+    skip_cleanup: true
+    keyfile: xomnia-training.json
+    project: xomnia-training
+default: true
