@@ -1,9 +1,16 @@
 language: python
 python:
-- "3.6"
+  - "3.6"
 
 install:
-- pip install -r requirements.txt
+  - pip install -r requirements.txt
 
 script:
-- python -m unittest discover
+  - python -m unittest discover
+  - coverage erase
+  - coverage run -m pytest && coverage html
+  - pylint --errors-only --output-format=text main.py
+
+after_success:
+  - codecov
+
