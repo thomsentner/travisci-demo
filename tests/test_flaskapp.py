@@ -20,8 +20,8 @@ class FlaskTestCase(unittest.TestCase):
 
 
     def test_uppercase(self):
-        response = self.app.get('/touppercase?s=xomniadisney')
-        self.assertEqual(response, 'XOMNIADISNEY', ' To uppercase test failed with input xomniadisney')
+        response = self.app.get('/touppercase?s=xomnia')
+        self.assertEqual(response, 'XOMNIA', ' To uppercase test failed with input xomnia')
 
 
 if __name__ == '__main__':
