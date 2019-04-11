@@ -2,5 +2,3 @@ Flask
 Flask-BasicAuth
 codecov
 pylint
-gunicorn
-
