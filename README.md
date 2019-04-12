@@ -1,4 +1,4 @@
-[![BuildStatus}(https://travis-ci.com/MeekeRoet/travisci-demo.png)]
+[![BuildStatus](https://travis-ci.com/MeekeRoet/travisci-demo.png)]
 
 # travisci-demo
 
