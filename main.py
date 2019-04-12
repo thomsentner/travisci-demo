@@ -14,7 +14,7 @@ def hello():
 def multiply():
     x = int(request.args.get('x'))
     y = int(request.args.get('y'))
-    return jsonify({'answer':x*y})
+    return jsonify({'answer': x*y})
 
 @app.route('/touppercase')
 def touppercase():

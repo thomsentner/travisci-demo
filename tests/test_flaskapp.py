@@ -20,8 +20,9 @@ class FlaskTestCase(unittest.TestCase):
 
     def test_touppercase(self):
         expected_output_string = 'HELLOWORLD'
-        actual_output_string = self.app.get('/touppercase?s=helloworld')
-        self.assertEqual(actual_output_string,
+        response = self.app.get('/touppercase?s=helloworld')
+
+        self.assertEqual(response.data.decode('utf-8'),
                          expected_output_string,
                          'Touppercase endpoint failed known answer helloworld > HELLOWORLD')
 
