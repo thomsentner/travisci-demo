@@ -1,4 +1,4 @@
-from flask import Flask,request,jsonify
+from flask import Flask, request, jsonify
 from flask_basicauth import BasicAuth
 
 app = Flask(__name__)
@@ -14,12 +14,12 @@ def hello():
 def multiply():
     x = int(request.args.get('x'))
     y = int(request.args.get('y'))
-    return jsonify({'answer':x*y})
+    return jsonify({'answer': x*y})
 
 @app.route('/touppercase')
 def touppercase():
     string = request.args.get('s')
-    return string.toupper()
+    return string.upper()
 
 
 @app.route('/authorized')
