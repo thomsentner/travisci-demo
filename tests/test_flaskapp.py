@@ -20,6 +20,10 @@ class FlaskTestCase(unittest.TestCase):
 
 
     # TODO DEFINE TWO MORE TESTS ON THE END POINTS
+    def test_uppercase(self):
+        response = self.app.get('/touppercase?s=pizzaAAA')
+        resp = response.data.decode('utf-8')
+        self.assertEqual(resp, 'PIZZA', 'touppercase(pizza) != PIZZA', )
 
 
 if __name__ == '__main__':
