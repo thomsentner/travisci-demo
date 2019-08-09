@@ -6,10 +6,18 @@ install:
   - pip install -r requirements.txt
 
 script:
+<<<<<<< HEAD
   - python -m unittest discover #Kijkt naar alle classes waar test in staat en runt die
+=======
+  - python -m unittest discover
+>>>>>>> parent of 6731416... remove travis
   - coverage erase
   - coverage run -m pytest && coverage html
   - pylint --errors-only main.py
 
 after_success:
+<<<<<<< HEAD
   - codecov
+=======
+  - codecov
+>>>>>>> parent of 6731416... remove travis
