@@ -26,7 +26,7 @@ class FlaskTestCase(unittest.TestCase):
 
     def test_touppercase2(self):
         response = self.app.get('/touppercase?s=jantine')
-        self.assertEqual(response.data.decode(), 'JANTINIA', 'Touppercase endpoint failed known answer is JANTINE')
+        self.assertEqual(response.data.decode(), 'JANTINE', 'Touppercase endpoint failed known answer is JANTINE')
     # TODO DEFINE TWO MORE TESTS ON THE END POINTS
 
 
