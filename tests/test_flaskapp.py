@@ -22,9 +22,9 @@ class FlaskTestCase(unittest.TestCase):
         response = self.app.get('/').data.decode()
         self.assertEqual(response,'Hello World!','Succeeding')
 
-    def test_fail(self):
-        response = self.app.get('/').data.decode()
-        self.assertEqual(response,'Hello World','Failing')
+    # def test_fail(self):
+    #     response = self.app.get('/').data.decode()
+    #     self.assertEqual(response,'Hello World','Failing')
 
 if __name__ == '__main__':
     unittest.main()
