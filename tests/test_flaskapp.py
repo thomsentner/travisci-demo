@@ -18,13 +18,13 @@ class FlaskTestCase(unittest.TestCase):
         resp = json.loads(response.data.decode())
         self.assertEqual(resp['answer'],35,'Multiply endpoint failed known answer 7*5 = 35')
 
-    def test_fail(self):
-        response = self.app.get('/')
-        self.assertEqual(response,'Hello World',response)
-
     def test_success(self):
-        response = self.app.get('/')
-        self.assertEqual(response,'Hello World!',response)
+        response = self.app.get('/').data.decode()
+        self.assertEqual(response,'Hello World!','Succeeding')
+
+    def test_fail(self):
+        response = self.app.get('/').data.decode()
+        self.assertEqual(response,'Hello World','Failing')
 
 if __name__ == '__main__':
     unittest.main()
