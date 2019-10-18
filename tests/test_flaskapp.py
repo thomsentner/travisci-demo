@@ -22,7 +22,7 @@ class FlaskTestCase(unittest.TestCase):
     def test_fail(self):
         response = self.app.get('/')
         # Check the hello world print
-        self.assertEqual(response,'Hello World!','Hello World did not behave as expected')
+        self.assertEqual(response,'Hello World','Hello World did not behave as expected')
 
 if __name__ == '__main__':
     unittest.main()
