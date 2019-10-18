@@ -21,6 +21,7 @@ def touppercase():
     string = request.args.get('s')
     return string.upper()
 
+# change to make travis work
 
 @app.route('/authorized')
 @basic_auth.required
